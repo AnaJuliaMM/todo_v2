@@ -5,4 +5,4 @@ class CategoryEntity(models.Model):
   description = models.TextField()
 
   def __str__(self) -> str:
-    return "Category [%i - %s]" % (self.id, self.name)
+    return f"Category: {self.id}, {self.name}"

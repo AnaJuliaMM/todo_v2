@@ -6,7 +6,7 @@ class TaskEntity(models.Model):
   description = models.TextField()
   percent = models.IntegerField()
   state = models.BooleanField(default=True)
-  category = models.ForeignKey(CategoryEntity, on_delete=models.CASCADE)
+  category = models.ForeignKey(CategoryEntity, related_name="tasks", on_delete=models.CASCADE)
 
   def __str__(self) -> str:
-    return "Task [%i - %s - %d - %r]" % (self.id, self.name, self.percent, self.state)
+    return f"Task: {self.id}, {self.name}, {self.percent}, {self.state}"

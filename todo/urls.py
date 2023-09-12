@@ -1,9 +1,9 @@
 from django.urls import path
-from todo.views.category import CategoryView
-from todo.views.categoryDetail import CategoryDetailView
-from todo.views.categoryTask import CategoryTaskView
-from todo.views.task import TaskView
-from todo.views.taskDetail import TaskDetailView
+from todo.views.category.category import CategoryView
+from todo.views.category.categoryDetail import CategoryDetailView
+from todo.views.category_task.categoryTask import CategoryTaskView
+from todo.views.task.task import TaskView
+from todo.views.task.taskDetail import TaskDetailView
 
 urlpatterns = [
     path('categories/', CategoryView.as_view()),
